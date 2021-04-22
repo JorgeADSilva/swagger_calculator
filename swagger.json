@@ -1,0 +1,44 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Calculator API",
+        "description": "Easy API Calculator with swagger over HTTP",
+        "version": "1.0"
+    },
+    "host": "localhost:8001",
+    "basePath": "/",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/sum/?num1={a}&num2={b}": {
+            "get": {
+                "description": "Choose two numbers.",
+                "operationId": "SUM",
+                "parameters": [
+                    {
+                        "name": "a",
+                        "in": "path",
+                        "description": "First value. Default value <code>10</code>.",
+                        "required": true,
+                        "default": "10",
+                        "enum": [
+                            "10"
+                        ]
+                    },
+                    {
+                        "name": "b",
+                        "in": "path",
+                        "description": "Second value. Default value <code>15</code>.",
+                        "required": true,
+                        "default": "15",
+                        "enum": [
+                            "15"
+                        ]
+                    }
+                ],
+                "responses": {}
+            }
+        }
+    }
+}
